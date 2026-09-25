@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Service Quality", "description": "How well the service met your needs" },
+  { "id": 2, "name": "Staff Courtesy", "description": "Professionalism and helpfulness of staff" },
+  { "id": 3, "name": "Facility & Accessibility", "description": "Comfort, cleanliness, and ease of access" },
+  { "id": 4, "name": "Overall Experience", "description": "Your overall impression of the visit" }
+]

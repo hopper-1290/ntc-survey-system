@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questions &mdash; NTC Admin</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="https://formsphilippines.com/agencylogo/28.png" alt="NTC logo" class="brand__logo" />
+        <div>
+          <div class="brand__name">NTC Admin</div>
+          <div class="brand__tagline">Guest Satisfaction</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html"><span class="icon">&#9635;</span> Dashboard</a>
+        <a href="feedback.html"><span class="icon">&#9776;</span> Feedback</a>
+        <a href="analytics.html"><span class="icon">&#9673;</span> Analytics</a>
+        <a href="reports.html"><span class="icon">&#9636;</span> Reports</a>
+        <a href="questions.html" class="active"><span class="icon">&#9776;</span> Questions</a>
+        <a href="settings.html"><span class="icon">&#9881;</span> Settings</a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" id="logout-link"><span class="icon">&#8594;</span> Logout</a>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <h1>Questions</h1>
+        <div class="admin-topbar__user" id="admin-user-label">Administrator</div>
+      </header>
+
+      <main class="admin-content">
+        <div class="page-heading">
+          <div>
+            <h2>Survey Questions</h2>
+            <p>Questions shown to guests, grouped by category.</p>
+          </div>
+        </div>
+
+        <div id="questions-error" class="form-error" hidden></div>
+
+        <div class="dashboard-grid">
+          <div class="card">
+            <h3 style="margin-bottom: 1rem;">Current questions</h3>
+            <div id="questions-loading" class="state-message">Loading&hellip;</div>
+            <div id="questions-list"></div>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-bottom: 1rem;">Add a question</h3>
+            <form id="question-form">
+              <div class="field">
+                <label for="q-category">Category</label>
+                <select id="q-category" required></select>
+              </div>
+              <div class="field">
+                <label for="q-type">Answer type</label>
+                <select id="q-type">
+                  <option value="rating">Rating (1&ndash;5)</option>
+                  <option value="text">Open text</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="q-text">Question text</label>
+                <textarea id="q-text" rows="3" required placeholder="e.g. How would you rate our response time?"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Add Question</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/services/api.js"></script>
+  <script src="../js/services/authService.js"></script>
+  <script src="../js/services/questionService.js"></script>
+  <script src="../js/admin/adminShell.js"></script>
+  <script src="../js/admin/questions.js"></script>
+</body>
+</html>

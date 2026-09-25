@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "ntc-admin",
+    "name": "Administrator",
+    "role": "admin"
+  }
+]

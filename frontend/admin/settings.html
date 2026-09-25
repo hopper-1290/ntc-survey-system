@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings &mdash; NTC Admin</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="https://formsphilippines.com/agencylogo/28.png" alt="NTC logo" class="brand__logo" />
+        <div>
+          <div class="brand__name">NTC Admin</div>
+          <div class="brand__tagline">Guest Satisfaction</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html"><span class="icon">&#9635;</span> Dashboard</a>
+        <a href="feedback.html"><span class="icon">&#9776;</span> Feedback</a>
+        <a href="analytics.html"><span class="icon">&#9673;</span> Analytics</a>
+        <a href="reports.html"><span class="icon">&#9636;</span> Reports</a>
+        <a href="questions.html"><span class="icon">&#9776;</span> Questions</a>
+        <a href="settings.html" class="active"><span class="icon">&#9881;</span> Settings</a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" id="logout-link"><span class="icon">&#8594;</span> Logout</a>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <h1>Settings</h1>
+        <div class="admin-topbar__user" id="admin-user-label">Administrator</div>
+      </header>
+
+      <main class="admin-content">
+        <div class="page-heading">
+          <div>
+            <h2>Account</h2>
+            <p>Your admin account details.</p>
+          </div>
+        </div>
+
+        <div class="card" style="max-width: 480px;">
+          <div class="field">
+            <label>Name</label>
+            <div id="settings-name" style="font-weight: 600; color: var(--text-heading);"></div>
+          </div>
+          <div class="field">
+            <label>Username</label>
+            <div id="settings-username" style="font-weight: 600; color: var(--text-heading);"></div>
+          </div>
+          <div class="field">
+            <label>Role</label>
+            <div id="settings-role" style="font-weight: 600; color: var(--text-heading);"></div>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">
+            To change admin credentials, update <code>backend/data/users.json</code> on the server
+            (replace the demo password with a securely hashed one before going live).
+          </p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/services/api.js"></script>
+  <script src="../js/services/authService.js"></script>
+  <script src="../js/admin/adminShell.js"></script>
+  <script src="../js/admin/settings.js"></script>
+</body>
+</html>

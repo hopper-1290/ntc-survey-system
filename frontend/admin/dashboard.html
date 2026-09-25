@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard &mdash; NTC Admin</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="https://formsphilippines.com/agencylogo/28.png" alt="NTC logo" class="brand__logo" />
+        <div>
+          <div class="brand__name">NTC Admin</div>
+          <div class="brand__tagline">Guest Satisfaction</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="active"><span class="icon">&#9635;</span> Dashboard</a>
+        <a href="feedback.html"><span class="icon">&#9776;</span> Feedback</a>
+        <a href="analytics.html"><span class="icon">&#9673;</span> Analytics</a>
+        <a href="reports.html"><span class="icon">&#9636;</span> Reports</a>
+        <a href="questions.html"><span class="icon">&#9776;</span> Questions</a>
+        <a href="settings.html"><span class="icon">&#9881;</span> Settings</a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" id="logout-link"><span class="icon">&#8594;</span> Logout</a>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <h1>Dashboard</h1>
+        <div class="admin-topbar__user" id="admin-user-label">Administrator</div>
+      </header>
+
+      <main class="admin-content">
+        <div class="page-heading">
+          <div>
+            <h2>Dashboard</h2>
+            <p>Overview of guest satisfaction and recent feedback.</p>
+          </div>
+          <a href="feedback.html" class="btn btn-primary">View Feedback &rarr;</a>
+        </div>
+
+        <div id="dashboard-error" class="form-error" hidden></div>
+        <div id="dashboard-loading" class="state-message">Loading dashboard data&hellip;</div>
+
+        <div id="dashboard-content" hidden>
+          <section class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-card__label">Total Responses</div>
+              <div class="stat-card__value" id="stat-total">&mdash;</div>
+              <div class="stat-card__delta" id="stat-total-delta"></div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__label">Average Rating</div>
+              <div class="stat-card__value" id="stat-avg">&mdash;</div>
+              <div class="stat-card__delta" id="stat-avg-delta"></div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__label">Satisfied</div>
+              <div class="stat-card__value" id="stat-satisfied">&mdash;</div>
+              <div class="stat-card__delta neutral">Based on overall rating</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__label">This Month</div>
+              <div class="stat-card__value" id="stat-month">&mdash;</div>
+              <div class="stat-card__delta neutral">Guest responses</div>
+            </div>
+          </section>
+
+          <section class="dashboard-grid">
+            <div class="card chart-card">
+              <h3>Satisfaction trend</h3>
+              <div class="bar-chart" id="bar-chart"></div>
+            </div>
+            <div class="card chart-card">
+              <h3>Overall satisfaction</h3>
+              <div class="donut-wrap">
+                <svg id="donut-chart" width="180" height="180" viewBox="0 0 42 42"></svg>
+                <div class="donut-legend" id="donut-legend"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/services/api.js"></script>
+  <script src="../js/services/authService.js"></script>
+  <script src="../js/services/analyticsService.js"></script>
+  <script src="../js/admin/adminShell.js"></script>
+  <script src="../js/admin/dashboard.js"></script>
+</body>
+</html>

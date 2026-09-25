@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTC Guest Satisfaction Portal</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/public.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="https://formsphilippines.com/agencylogo/28.png" alt="NTC logo" class="brand__logo" />
+      <div>
+        <div class="brand__name">National Telecommunications Commission</div>
+        <div class="brand__tagline">Guest Satisfaction Portal</div>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="survey.html">Survey</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="hero__eyebrow">Public Service Feedback</div>
+        <h1>Your feedback matters.</h1>
+        <p>
+          Help the National Telecommunications Commission improve the quality,
+          accessibility, and efficiency of its public services through your experience.
+        </p>
+        <div class="hero__actions">
+          <a href="survey.html" class="btn btn-primary">Take the Survey &rarr;</a>
+          <a href="about.html" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="hero__card-header">
+          <h3>NTC Guest Experience</h3>
+          <span class="badge badge-info">2&ndash;4 min &middot; Mobile friendly</span>
+        </div>
+        <div class="hero__card-body">
+          <div class="hero__mock">
+            <div class="hero__mock-form">
+              <div class="hero__mock-line"></div>
+              <div class="hero__mock-line short"></div>
+              <div class="hero__mock-check">&#10003;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why your response counts</h2>
+      <div class="feature-grid">
+        <div class="card">
+          <h3>Faster service</h3>
+          <p>Your ratings help identify where processing times can be improved across NTC offices.</p>
+        </div>
+        <div class="card">
+          <h3>Better support</h3>
+          <p>Comments on staff interactions are used directly in training and coaching.</p>
+        </div>
+        <div class="card">
+          <h3>Transparent results</h3>
+          <p>Aggregated satisfaction data informs public reporting on service quality.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    &copy; <span id="year"></span> National Telecommunications Commission &mdash; Guest Satisfaction Portal
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

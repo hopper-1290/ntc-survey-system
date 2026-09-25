@@ -1,0 +1,10 @@
+[
+  { "id": 1, "categoryId": 1, "type": "rating", "text": "How would you rate the speed of service you received?", "order": 1 },
+  { "id": 2, "categoryId": 1, "type": "rating", "text": "How satisfied are you with the accuracy of the information provided?", "order": 2 },
+  { "id": 3, "categoryId": 2, "type": "rating", "text": "How courteous and professional was the staff who assisted you?", "order": 1 },
+  { "id": 4, "categoryId": 2, "type": "rating", "text": "Did the staff clearly explain the process to you?", "order": 2 },
+  { "id": 5, "categoryId": 3, "type": "rating", "text": "How would you rate the cleanliness and comfort of the facility?", "order": 1 },
+  { "id": 6, "categoryId": 3, "type": "rating", "text": "How accessible was the office/service for you?", "order": 2 },
+  { "id": 7, "categoryId": 4, "type": "rating", "text": "Overall, how satisfied are you with your visit today?", "order": 1 },
+  { "id": 8, "categoryId": 4, "type": "text", "text": "Do you have any suggestions for how we can improve?", "order": 2 }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "ntc-guest-satisfaction-backend",
+  "version": "1.0.0",
+  "description": "Backend API for the NTC Guest Satisfaction Survey and Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

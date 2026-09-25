@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About &mdash; NTC Guest Satisfaction Portal</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/public.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="https://formsphilippines.com/agencylogo/28.png" alt="NTC logo" class="brand__logo" />
+      <div>
+        <div class="brand__name">National Telecommunications Commission</div>
+        <div class="brand__tagline">Guest Satisfaction Portal</div>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="survey.html">Survey</a>
+      <a href="about.html" class="active">About</a>
+    </nav>
+  </header>
+
+  <main class="section" style="max-width: 800px;">
+    <h2>About this portal</h2>
+    <p style="margin-bottom: 1rem; color: var(--text-body);">
+      The NTC Guest Satisfaction Portal collects feedback from members of the public who
+      visit NTC offices or use NTC services. Responses are reviewed by the Guest
+      Satisfaction team and summarized for management reporting.
+    </p>
+    <p style="margin-bottom: 1rem; color: var(--text-body);">
+      The survey takes about 2&ndash;4 minutes and covers service quality, staff courtesy,
+      facility accessibility, and your overall experience. Your responses help identify
+      where service can be improved.
+    </p>
+    <a href="survey.html" class="btn btn-primary">Take the Survey &rarr;</a>
+  </main>
+
+  <footer class="site-footer">
+    &copy; <span id="year"></span> National Telecommunications Commission &mdash; Guest Satisfaction Portal
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
